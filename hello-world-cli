@@ -1,0 +1,24 @@
+{
+  "name": "hello-cli-js",
+  "version": "1.0.0",
+  "description": "A tiny Node.js CLI that prints a greeting",
+  "bin": {
+    "hello": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "greet": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {}
+}#!/usr/bin/env node
+/**
+ * Title: Hello CLI (JavaScript)
+ * Real-life small utility: prints a greeting to the console.
+ * Usage: npx hello or node index.js
+ */
+
+// Use a provided name or default to 'World'
+const name = process.argv[2] || 'World';
+console.log(`Hello, ${name}! 👋`);
