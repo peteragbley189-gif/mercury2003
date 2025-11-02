@@ -1,0 +1,19 @@
+# Conversion rate: 1 USD = 12 Cedis
+EXCHANGE_RATE = 12  # Cedis per USD
+
+def cedis_to_usd(cedis_amount):
+    """Convert Ghana Cedis to USD"""
+    return cedis_amount / EXCHANGE_RATE
+
+def usd_to_cedis(usd_amount):
+    """Convert USD to Ghana Cedis"""
+    return usd_amount * EXCHANGE_RATE
+
+# Example usage
+cedis_amount = float(input("Enter amount in Cedis: "))
+usd_amount = cedis_to_usd(cedis_amount)
+print(f"{cedis_amount} Cedis is equivalent to {usd_amount:.2f} USD")
+
+usd_amount_input = float(input("Enter amount in USD: "))
+cedis_amount_converted = usd_to_cedis(usd_amount_input)
+print(f"{usd_amount_input} USD is equivalent to {cedis_amount_converted:.2f} Cedis")
